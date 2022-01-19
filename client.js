@@ -13,14 +13,6 @@ const connect = function() {
   conn.on('connect', () => {
     console.log("Successfully connected to game server!..NOICE");
     conn.write(`Name: ANA`);
-
-    // setInterval(() => {
-    //   conn.write(`Move: up`);
-    // }, 500);
-    // setTimeout(() => {
-    //   conn.write(`Move: left`);
-    // }, 1500);
-
     
   });
 
@@ -31,6 +23,43 @@ const connect = function() {
   return conn;
 };
 
+
+
 module.exports = {
   connect,
 };
+
+
+/*
+    // setInterval(() => {
+    //   conn.write(`Move: up`);
+    // }, 500);
+    // setTimeout(() => {
+    //   conn.write(`Move: left`);
+    // }, 1500);
+
+
+if (key === '\u001B\u005B\u0041') {
+  setInterval(() => {
+    conn.write(`Move: up`);
+  }, 500);
+}
+if (key === '\u001B\u005B\u0043') {
+  setInterval(() => {
+    conn.write(`Move: right`);
+  }, 500);
+}
+if (key === '\u001B\u005B\u0042') {
+  setInterval(() => {
+    conn.write(`Move: down`);
+  }, 500);
+}
+if (key === '\u001B\u005B\u0044') {
+  setInterval(() => {
+    conn.write(`Move: left`);
+  }, 500);
+}
+if (key === '\u0003') {
+  process.exit();
+};
+*/
