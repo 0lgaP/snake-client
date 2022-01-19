@@ -1,10 +1,11 @@
 
 const net = require("net");
+const { IP, PORT } = require("./constants");
 
 const connect = function() {
   const conn = net.createConnection({
-    host: 'localhost',
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   // interpret incoming data as text
@@ -27,38 +28,3 @@ const connect = function() {
 module.exports = {
   connect,
 };
-
-
-/*
-    // setInterval(() => {
-    //   conn.write(`Move: up`);
-    // }, 500);
-    // setTimeout(() => {
-    //   conn.write(`Move: left`);
-    // }, 1500);
-
-
-if (key === '\u001B\u005B\u0041') {
-  setInterval(() => {
-    conn.write(`Move: up`);
-  }, 500);
-}
-if (key === '\u001B\u005B\u0043') {
-  setInterval(() => {
-    conn.write(`Move: right`);
-  }, 500);
-}
-if (key === '\u001B\u005B\u0042') {
-  setInterval(() => {
-    conn.write(`Move: down`);
-  }, 500);
-}
-if (key === '\u001B\u005B\u0044') {
-  setInterval(() => {
-    conn.write(`Move: left`);
-  }, 500);
-}
-if (key === '\u0003') {
-  process.exit();
-};
-*/
