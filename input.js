@@ -17,16 +17,17 @@ const setupInput = function(connection) {
 
 
 const handleUserInput = function(key) {
-  if (key === '\u001B\u005B\u0041') {
+  if (key === 'w') {
     conn.write(`Move: up`);
+
   }
-  if (key === '\u001B\u005B\u0043') {
+  if (key === 'd') {
     conn.write(`Move: right`);
   }
-  if (key === '\u001B\u005B\u0042') {
+  if (key === 's') {
     conn.write(`Move: down`);
   }
-  if (key === '\u001B\u005B\u0044') {
+  if (key === 'a') {
     conn.write(`Move: left`);
   }
   if (key === '\u0003') {
