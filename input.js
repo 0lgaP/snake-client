@@ -30,6 +30,15 @@ const handleUserInput = function(key) {
   if (key === 'a') {
     conn.write(`Move: left`);
   }
+  if (key === 'g') {
+    conn.write(`Say: conda don't want`);
+  }
+  if (key === 'h') {
+    conn.write(`Say: none unless`);
+  }
+  if (key === 'j') {
+    conn.write(`Say: u got buns hun`);
+  }
   if (key === '\u0003') {
     process.exit();
   }
